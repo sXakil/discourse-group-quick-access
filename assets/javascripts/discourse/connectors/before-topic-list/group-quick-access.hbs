@@ -1,0 +1,14 @@
+<div id="group-quick-access">
+  <div class="group-filters">
+    {{#each this.site.quick_access_groups as |group|}}
+      <a
+        href="{{group.link}}"
+        title="{{group.full_name}}"
+        class="group-filter-dot"
+        style="background-color: {{group.color}};"
+        data-group-name="{{group.name}}"
+        data-group-color="{{group.color}}"
+      >&nbsp;</a>
+    {{/each}}
+  </div>
+</div>

@@ -1,4 +1,16 @@
-TODO_plugin_name:
-  plugin_name_enabled:
-    default: false
+plugins:
+  group_quick_access_enabled:
+    default: true
     client: true
+
+  group_quick_access_groups:
+    default: "moderators#ff0000|staff#00ff00"
+    type: list
+    list_type: compact
+    client: true
+    description: "Group names to show in quick access (separated by |)"
+
+  group_quick_access_link_template:
+    default: "/filter?q=group%3A{group_name}%20order%3Alatest"
+    client: true
+    description: "Template for group links, use {group_name} as a placeholder"

@@ -1,0 +1,40 @@
+  #group-quick-access {
+    margin: 8px 0;
+
+    .group-filters {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .group-filter-dot {
+        position: relative;
+        text-decoration: none;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+
+        &:hover {
+          filter: brightness(80%);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 14px;
+          height: 14px;
+          border-radius: 7px;
+          background-color: #afafaf;
+          z-index: 1;
+          opacity: 1;
+        }
+
+        &.selected::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
