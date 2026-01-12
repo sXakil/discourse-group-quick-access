@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# name: group-quick-access
+# name: discourse-group-quick-access
 # about: Adds a quick access bar for specified groups with color coded dots
 # version: 0.0.1
 # authors: sXakil
