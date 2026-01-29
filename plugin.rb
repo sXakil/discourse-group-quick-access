@@ -39,8 +39,8 @@ after_initialize do
                   .visible_groups(scope.user)
                   .pluck(:name, :id, :full_name)
     
-    # Combine with color data
-    groups.map do |name, id, full_name|
+    # Combine with color data, maintaining original order from settings
+    groups.sort_by { |name, id, full_name| group_names.index(name) }.map do |name, id, full_name|
       color_data = groups_data.find { |g| g[:name] == name }
       {
         name: name,
