@@ -5,13 +5,18 @@
 
     label {
       margin: 0;
+      color: #a6a6a6;
       cursor: pointer;
-      img {
+
+      svg {
         transform: translateX(0) rotate(90deg);
         transition: transform 0.3s ease-in-out;
       }
+      &:hover {
+        color: #8e0086;
+      }
     }
-    input:checked + label > img {
+    input:checked + label > svg {
       transform: translateX(-4px) rotate(0deg);
     }
     input {
